@@ -1,0 +1,136 @@
+$color-primary: #FABE00;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+    color: $color-primary;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+html {
+    font-size: 62.5%;
+
+    // overflow-x: hidden;
+    // &::-webkit-scrollbar {
+    //     display: none;
+    // }
+
+    // overflow-y: auto;
+    // overflow-x: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: $color-primary;
+    // height: 1000px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100vh;
+    // height: 100vw;
+    // &::-webkit-scrollbar {
+    //     display: none;
+    // }
+
+    // width: 100px;
+    // height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+
+    &>* {
+        transform: rotate(90deg);
+        transform-origin: right top;
+    }
+}
+
+.box-1 {
+    font-size: 2rem;
+    height: 100vh;
+    padding: 5rem;
+    border-right: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+
+    h2 {
+        font-weight: 500;
+        width: 80%;
+        margin: 0 auto 5rem;
+    }
+}
+
+.box-2 {
+    display: flex;
+    width: 50%;
+    flex-wrap: nowrap;
+    // overflow: hidden;
+    // position: sticky;
+    // left: 0;
+
+    &>* {
+        flex: 0 0 50%;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 1.3px;
+    }
+
+    p {
+        color: #fff;
+    }
+
+    .strip-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 7rem 2rem;
+        background: linear-gradient(to right bottom, rgba($color-primary, .3), rgba(0, 0, 0, .3)),
+            url(../img/strip1.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .strip-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 7rem 2rem;
+        background: linear-gradient(to right bottom, rgba($color-primary, .3), rgba(0, 0, 0, .3)),
+            url(../img/strip2.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .strip-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 7rem 2rem;
+        background: linear-gradient(to right bottom, rgba($color-primary, .3), rgba(0, 0, 0, .3)),
+            url(../img/strip3.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .strip-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 7rem 2rem;
+        background: linear-gradient(to right bottom, rgba($color-primary, .3), rgba(0, 0, 0, .3)),
+            url(../img/strip4.jpg) no-repeat;
+        background-size: cover;
+    }
+}
