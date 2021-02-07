@@ -21,20 +21,17 @@ html {
 body {
   font-family: sans-serif;
   background-color: #FABE00;
+  height: 1000px;
 }
 
 .wrapper {
   display: flex;
-  width: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg);
-  transform-origin: right top;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
-.wrapper > * {
-  transform: rotate(90deg);
-  transform-origin: right top;
+.wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .box-1 {
