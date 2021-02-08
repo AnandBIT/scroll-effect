@@ -30,12 +30,12 @@
                 <!-- <a href="#">EXPLORE</a> -->
             </div>
             <div class="strip-3">
-                <h1>INFLUENCER MARKETING</h1>
-                <p>Redefining digital marketing with the influencers that help your brand grow.</p>
-                <a href="#">EXPLORE</a>
+                <h1>SOCIAL MEDIA<br>MANAGEMENT</h1>
+                <!-- <p>Redefining digital marketing with the influencers that help your brand grow.</p> -->
+                <!-- <a href="#">EXPLORE</a> -->
             </div>
             <div class="strip-4">
-                <h1>INFLUENCER MARKETING</h1>
+                <h1>VIDEO<br>PRODUCTION</h1>
                 <!-- <p>Redefining digital marketing with the influencers that help your brand grow.</p> -->
                 <!-- <a href="#">EXPLORE</a> -->
             </div>
@@ -43,65 +43,21 @@
     </div>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
 <script>
-    (function () {
-        const target = document.querySelector(".wrapper");
+    const el = document.querySelector('.wrapper');
 
-        function scrollHorizontally(e) {
-            e = window.event || e;
-            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            target.scrollLeft -= (delta * 40); // Multiplied by 40
-
-            if ((delta > 0 && target.scrollLeft > 0) ||
-                (delta < 0 && target.offsetWidth + target.scrollLeft < el.scrollWidth))
-                e.preventDefault();
-
-        }
-        // if (target.addEventListener) {
-        // IE9, Chrome, Safari, Opera
-        target.addEventListener('mousewheel', scrollHorizontally, false);
-        // Firefox
-        // target.addEventListener('DOMMouseScroll', scrollHorizontally, false);
-        // } else {
-        // IE 6/7/8
-        // target.attachEvent('onmousewheel', scrollHorizontally);
-        // }
-    })();
-</script>
-
-<!-- <script>
-    $(function ($) {
-        $.fn.hScroll = function (amount) {
-            amount = amount || 120;
-            $(this).bind("DOMMouseScroll mousewheel", function (event) {
-                var oEvent = event.originalEvent,
-                    direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
-                    position = $(this).scrollLeft();
-                position += direction > 0 ? -amount : amount;
-                $(this).scrollLeft(position);
-                event.preventDefault();
-            })
-        };
-    });
-
-    $(document).ready(function () {
-        $('#yourDiv').hScroll(100); // You can pass (optionally) scrolling amount
-    });
-</script> -->
-
-<!-- <script>
-    const target = document.querySelector('.wrapper');
-
-    target.addEventListener('wheel', event => {
-        const toLeft = event.deltaY < 0 && target.scrollLeft > 0;
-        const toRight = event.deltaY > 0 && target.scrollLeft < target.scrollWidth - target.clientWidth;
+    el.addEventListener('wheel', event => {
+        const toLeft = event.deltaY < 0 && el.scrollLeft > 0;
+        const toRight = event.deltaY > 0 && el.scrollLeft < el.scrollWidth - el.clientWidth;
 
         if (toLeft || toRight) {
             event.preventDefault();
-            target.scrollLeft += event.deltaY;
+            el.scrollLeft += event.deltaY / 2;
         }
+        // console.log(`toRight: ${toRight} , toLeft: ${toLeft}`);
     });
-</script> -->
+</script>
 
 </html>
