@@ -30,12 +30,12 @@ html {
 
 body {
     font-family: sans-serif;
-    background-color: $color-primary;
     height: 1000px;
 }
 
 .wrapper {
     display: flex;
+    background-color: $color-primary;
     // width: 100vh;
     // height: 100vw;
     &::-webkit-scrollbar {

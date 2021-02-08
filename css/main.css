@@ -24,12 +24,12 @@ html::-webkit-scrollbar {
 
 body {
   font-family: sans-serif;
-  background-color: #FABE00;
   height: 1000px;
 }
 
 .wrapper {
   display: flex;
+  background-color: #FABE00;
   overflow-y: hidden;
   overflow-x: auto;
 }
