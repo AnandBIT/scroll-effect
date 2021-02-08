@@ -16,15 +16,28 @@ a:visited {
 
 html {
   font-size: 62.5%;
+  /* Track */
+  /* Handle */
 }
 
 html::-webkit-scrollbar {
-  display: none;
+  width: 20px;
+  background-color: white;
+}
+
+html::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #585858;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6200ff, #e6c7f1);
+  border-radius: 10px;
 }
 
 body {
   font-family: sans-serif;
-  height: 1000px;
+  height: 10000px;
 }
 
 .wrapper {
